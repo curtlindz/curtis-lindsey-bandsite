@@ -1,0 +1,28 @@
+.header {
+    background-color: $bandsite-black;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 0 0;
+
+    img {
+        max-height:20px;
+        max-width:120px;
+    }
+    
+}
+
+.header__links {
+    font-size: 10px;
+    display: flex;
+    list-style: none;
+    color:$white;
+    justify-content: space-evenly;
+    padding: 16px 0;
+
+    &--active {
+        font-family: 'Avenir Next LT Pro Bold';
+    }
+}
