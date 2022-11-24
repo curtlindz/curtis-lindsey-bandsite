@@ -23,7 +23,24 @@ h1, h2 {
   padding: 0 16px;
 }
 .about h1 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 24px;
   padding: 24px 0 16px 0;
+}
+.about p {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 14px;
+  padding: 0 0 16px 0;
+}
+.about h3 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 14px;
+  padding: 0 0 16px 0;
+}
+.about article {
+  font-family: "Avenir Next LT Pro Regular";
+  font-size: 13px;
+  padding: 0 0 16px 0;
 }
 .about img {
   width: 100%;
@@ -33,10 +50,17 @@ h1, h2 {
 
 .gallery {
   padding: 0 16px;
+  background-color: #FAFAFA;
+}
+.gallery h1 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 24px;
+  padding: 24px 0 16px 0;
 }
 .gallery img {
   width: 100%;
   height: auto;
+  padding: 0 0 16px 0;
 }
 
 .header {

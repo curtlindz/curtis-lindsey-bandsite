@@ -1,9 +1,17 @@
 .gallery {
-    
+
     padding: 0 16px;
+    background-color: $alabaster;
+
+    h1 {
+        font-family: 'Avenir Next LT Pro Demi';
+        font-size: 24px;
+        padding: 24px 0 16px 0;
+    }
 
     img {
         width:100%;
         height:auto;
+        padding: 0 0 16px 0;
     }
 }
