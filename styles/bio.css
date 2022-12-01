@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-h1, h2 {
+h1, h2, p, section {
   font-family: "Avenir Next LT Pro Regular";
 }
 
@@ -47,7 +47,139 @@ h1, h2 {
   height: auto;
   padding: 0 0 16px 0;
 }
+@media (min-width: 768px) {
+  .about {
+    padding: 0;
+  }
+  .about h1 {
+    padding: 48px 0 36px 36px;
+    font-size: 36px;
+  }
+  .about .about__quotation {
+    padding: 0 80px 36px 80px;
+  }
+  .about .about__quotation--quote {
+    font-family: "Avenir Next LT Pro Demi";
+    font-size: 24px;
+  }
+  .about .about__quotation--credit {
+    font-family: "Avenir Next LT Pro Demi";
+    font-size: 14px;
+  }
+  .about .about__article {
+    display: flex;
+    font-family: "Avenir Next LT Pro Regular";
+    font-size: 14px;
+    padding: 0 80px 36px 80px;
+  }
+  .about .about__article :last-child {
+    padding: 0 0 0 36px;
+  }
+  .about h3 {
+    font-family: "Avenir Next LT Pro Demi";
+    font-size: 24px;
+    padding: 0 80px 36px 80px;
+  }
+  .about img {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0 80px 36px 80px;
+  }
+}
 
+@media (min-width: 1280px) {
+  .about {
+    width: 1020px;
+  }
+  .about__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 0 16px;
+}
+.footer h1 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 24px;
+  padding: 24px 0 16px 0;
+}
+.footer h2 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 14px;
+}
+.footer p {
+  font-size: 13px;
+}
+.footer img {
+  padding: 0 16px 16px 0;
+}
+.footer__heading--logotabdesk {
+  display: none;
+}
+.footer__section--component {
+  padding: 0 0 16px 0;
+}
+.footer__section--logomobile {
+  padding: 32px 0 0 0;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 0 36px;
+  }
+  .footer h1 {
+    font-family: "Avenir Next LT Pro Demi";
+    font-size: 36px;
+    padding: 48px 0 36px 0;
+  }
+  .footer h2 {
+    font-family: "Avenir Next LT Pro Demi";
+    font-size: 14px;
+  }
+  .footer p {
+    font-size: 13px;
+  }
+  .footer img {
+    padding: 0 0 0 36px;
+  }
+  .footer__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .footer__heading--left {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer__heading--logotabdesk {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer__section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__section--component {
+    padding: 0 0 36px 0;
+  }
+  .footer__section--logomobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    width: 1020px;
+  }
+  .footer__container {
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+  }
+}
 .gallery {
   padding: 0 16px;
   background-color: #FAFAFA;
@@ -62,11 +194,45 @@ h1, h2 {
   height: auto;
   padding: 0 0 16px 0;
 }
-
-.header {
-  background-color: #323232;
+@media (min-width: 768px) {
+  .gallery {
+    padding: 0;
+  }
+  .gallery h1 {
+    padding: 48px 0 36px 36px;
+    font-size: 36px;
+  }
+  .gallery .gallery__images {
+    display: flex;
+    padding: 0 18px;
+  }
+  .gallery .gallery__images--row {
+    padding: 0 18px;
+  }
+  .gallery img {
+    padding: 0 0 36px 0;
+  }
 }
 
+@media (min-width: 1280px) {
+  .gallery {
+    width: 1020px;
+    padding: 0;
+  }
+  .gallery__container {
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+  }
+  .gallery__images {
+    padding: 0;
+  }
+}
+.header {
+  background-color: #323232;
+  font-size: 14px;
+  font-family: "Avenir Next LT Pro Regular";
+}
 .header__logo {
   display: flex;
   justify-content: center;
@@ -76,22 +242,60 @@ h1, h2 {
   max-height: 20px;
   max-width: 120px;
 }
-
 .header__links {
-  font-size: 10px;
   display: flex;
   list-style: none;
   color: #FFFFFF;
   justify-content: space-evenly;
+}
+.header__links--link {
   padding: 16px 0;
+  width: 100%;
+  text-align: center;
 }
 .header__links--active {
-  font-family: "Avenir Next LT Pro Bold";
+  font-family: "Avenir Next LT Pro Demi";
+  border-bottom: solid;
 }
 
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Avenir Next LT Pro Regular";
+  }
+  .header__logo {
+    padding: 36px;
+  }
+  .header__links {
+    display: flex;
+    list-style: none;
+    color: #FFFFFF;
+    justify-content: space-evenly;
+    padding: 0 36px;
+  }
+  .header__links--link {
+    padding: 36px 36px;
+  }
+  .header__links--active {
+    font-family: "Avenir Next LT Pro Demi";
+    border-bottom: solid;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    width: 1020px;
+  }
+  .header__container {
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+  }
+}
 .hero {
-  position: relative;
   text-align: left;
+  position: relative;
 }
 .hero img {
   width: 100%;
@@ -115,4 +319,11 @@ h1, h2 {
   background: #323232;
   opacity: 0.5;
   top: 0;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+    padding: 0 36px;
+  }
 }/*# sourceMappingURL=bio.css.map */

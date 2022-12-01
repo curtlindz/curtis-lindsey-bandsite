@@ -1,10 +1,12 @@
 .hero {
-    position: relative;
+    
     text-align: left;
-
+    position: relative;
+    
     img {
         width: 100%;
         height: auto;
+
     }
 
     &__text {
@@ -28,7 +30,15 @@
             background:$bandsite-black;
             opacity:0.5;
             top:0;
+            overflow:hidden;
         }
 
+    }
+
+    @include tablet {
+        h1 {
+            font-size: 36px;
+            padding: 0 36px;
+        }
     }
 }

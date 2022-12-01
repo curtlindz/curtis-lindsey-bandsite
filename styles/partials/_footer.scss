@@ -1,0 +1,112 @@
+.footer {
+    background-color: $bandsite-black;
+    color:$white;
+    padding: 0 16px;
+
+
+    h1 {
+        font-family: 'Avenir Next LT Pro Demi';
+        font-size:24px;
+        padding: 24px 0 16px 0;
+    }
+
+    h2 {
+        font-family: 'Avenir Next LT Pro Demi';
+        font-size:14px;
+    }
+
+    p {
+        font-size:13px;
+    }
+
+    img {
+        padding: 0 16px 16px 0;
+    }
+
+    &__heading {
+
+        &--logotabdesk {
+            display:none;
+        }
+    }
+
+    &__section {
+
+        &--component {
+        padding: 0 0 16px 0;
+        }
+
+        &--logomobile {
+            padding: 32px 0 0 0;
+        }
+    }
+
+    @include tablet {
+        padding: 0 36px;
+
+        h1 {
+            font-family: 'Avenir Next LT Pro Demi';
+            font-size:36px;
+            padding: 48px 0 36px 0;
+        }
+    
+        h2 {
+            font-family: 'Avenir Next LT Pro Demi';
+            font-size:14px;
+        }
+    
+        p {
+            font-size:13px;
+        }
+    
+        img {
+            padding: 0 0 0 36px;
+        }
+    
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            &--left {
+                display:flex;
+                align-items: baseline;
+            }
+
+            &--logotabdesk {
+                display:flex;
+                justify-content: flex-end;
+            }
+        }
+
+        &__section {
+            
+            display:flex;
+            justify-content: space-between;
+
+            &--component {
+            padding: 0 0 36px 0;
+            }
+    
+            &--logomobile {
+                display:none;
+            }
+        }
+
+    }
+
+
+}
+
+@include desktop {
+
+    .footer {
+        width:1020px;
+    
+        &__container {
+            background-color: $bandsite-black;
+            display:flex;
+            justify-content: center;
+        }
+    }
+}

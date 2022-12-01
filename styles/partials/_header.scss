@@ -1,28 +1,84 @@
 .header {
+
     background-color: $bandsite-black;
-}
+    font-size: 14px;
+    font-family:'Avenir Next LT Pro Regular';
 
-.header__logo {
-    display: flex;
-    justify-content: center;
-    padding: 16px 0 0 0;
-
-    img {
-        max-height:20px;
-        max-width:120px;
-    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        padding: 16px 0 0 0;
     
+        img {
+            max-height:20px;
+            max-width:120px;
+        }
+        
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        color:$white;
+        justify-content: space-evenly;
+
+        
+
+        &--link {
+            padding: 16px 0;
+            width:100%;
+            text-align: center;
+        }
+    
+        &--active {
+            font-family: 'Avenir Next LT Pro Demi';
+            border-bottom: solid;
+        }
+    }
+
 }
 
-.header__links {
-    font-size: 10px;
-    display: flex;
-    list-style: none;
-    color:$white;
-    justify-content: space-evenly;
-    padding: 16px 0;
+@include tablet {
+    .header {
+        display:flex;
+        padding:0;
+        font-size: 14px;
+        font-family:'Avenir Next LT Pro Regular';
 
-    &--active {
-        font-family: 'Avenir Next LT Pro Bold';
+        &__logo {
+            padding: 36px;
+        }
+
+        &__links {
+            display: flex;
+            list-style: none;
+            color:$white;
+            justify-content: space-evenly;
+            padding: 0 36px ;
+            
+    
+            &--link {
+                padding: 36px 36px;
+            }
+            &--active {
+                font-family: 'Avenir Next LT Pro Demi';
+                border-bottom: solid;
+            }
+
+        }
     }
 }
+
+
+    @include desktop {
+
+        .header {
+            width:1020px;
+
+            &__container {
+                background-color: $bandsite-black;
+                display:flex;
+                justify-content: center;
+            }
+        }
+    }

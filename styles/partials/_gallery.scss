@@ -14,4 +14,53 @@
         height:auto;
         padding: 0 0 16px 0;
     }
+
+    
+}
+
+@include tablet {
+
+    padding: 0;
+
+    h1 {
+        padding: 48px 0 36px 36px;
+        font-size:36px;
+    }
+
+    .gallery {
+        &__images {
+            display:flex;
+            padding: 0 18px;
+    
+            &--row {
+                padding: 0 18px;
+            }
+        }
+    }
+
+    img {
+        padding: 0 0 36px 0;
+    }
+}
+
+@include desktop {
+
+    .gallery {
+        width:1020px;
+        padding:0;
+
+        &__container {
+            display:flex;
+            justify-content: center;
+            background-color: $alabaster;
+        }
+
+        &__images {
+            padding:0;
+
+            &--row {
+                padding: 0;
+            }
+        }
+    }
 }
