@@ -4,25 +4,23 @@
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
-        font-size: 24px;
+        font-size: 1.7rem;
         padding: 24px 0 16px 0;
     }
 
     p {
         font-family: 'Avenir Next LT Pro Demi';
-        font-size:14px;
         padding: 0 0 16px 0;
     }
 
     h3 {
         font-family: 'Avenir Next LT Pro Demi';
-        font-size:14px;
         padding: 0 0 16px 0;
     }
 
     article {
         font-family: 'Avenir Next LT Pro Regular';
-        font-size:13px;
+        font-size:0.93rem;
         padding: 0 0 16px 0;
     }
 
@@ -32,16 +30,35 @@
         padding: 0 0 16px 0;
     }
 
-    @include tablet {
+}
 
-        padding: 0;
+@include tablet {
 
-        h1 {
-            padding: 48px 0 36px 36px;
-            font-size:36px;
-        }
+        
 
         .about {
+
+            padding: 0;
+
+            h3 {
+                font-family: 'Avenir Next LT Pro Demi';
+                font-size:1.7rem;
+                padding: 0 80px 36px 80px;
+            }
+    
+            img {
+                box-sizing: border-box;
+                max-width:100%;
+                max-height:100%;
+                padding: 0 80px 36px 80px;
+            }
+            
+            h1 {
+                padding: 48px 0 36px 36px;
+                font-size:2.57rem;
+            }
+
+            
 
             &__quotation {
             
@@ -49,19 +66,19 @@
 
                 &--quote {
                     font-family: 'Avenir Next LT Pro Demi';
-                    font-size:24px;
+                    font-size:1.7rem;
                 }
 
                 &--credit {
                     font-family: 'Avenir Next LT Pro Demi';
-                    font-size:14px;
+                    font-size:1rem;
                 }
             }
 
             &__article {
                 display:flex;
                 font-family: 'Avenir Next LT Pro Regular';
-                font-size:14px;
+                font-size:1rem;
                 padding: 0 80px 36px 80px;
 
                 :last-child {
@@ -71,24 +88,13 @@
             
         }
 
-        h3 {
-            font-family: 'Avenir Next LT Pro Demi';
-            font-size:24px;
-            padding: 0 80px 36px 80px;
-        }
+        
 
-        img {
-            box-sizing: border-box;
-            max-width:100%;
-            max-height:100%;
-            padding: 0 80px 36px 80px;
-        }
-
-    }
+}
 
     
 
-}
+
 
 @include desktop {
 
@@ -100,6 +106,15 @@
             display:flex;
             justify-content: center;
         }
+
+        &__quotation {
+            
+
+            &--quote {
+                width:710px;
+        }
+
     }
 
+}
 }

@@ -1,8 +1,8 @@
 .hero {
-    
+    display:flex;
     text-align: left;
     position: relative;
-    
+
     img {
         width: 100%;
         height: auto;
@@ -17,7 +17,7 @@
             transform: translate(0, -50%);
             z-index: 9;
             color:$white;
-            font-size: 24px;
+            font-size: 1.7rem;
             font-family: 'Avenir Next LT Pro Demi';
             padding: 0 16px;
         }
@@ -35,10 +35,41 @@
 
     }
 
-    @include tablet {
+    
+}
+
+@include tablet {
+
+    .hero {
+
+        display:flex;
+
         h1 {
-            font-size: 36px;
+            font-size: 4.29rem;
             padding: 0 36px;
+        }
+    }
+    
+}
+
+@include desktop {
+
+    .hero {
+
+        display:flex;
+        justify-content: center;
+
+        h1 {
+            padding: 0 36px;
+        }
+
+        &__text {
+
+            &--outer {
+                width:1020px;
+                box-sizing: border-box;
+                
+            }
         }
     }
 }

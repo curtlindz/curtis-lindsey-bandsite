@@ -6,17 +6,17 @@
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
-        font-size:24px;
+        font-size:1.7rem;
         padding: 24px 0 16px 0;
     }
 
     h2 {
         font-family: 'Avenir Next LT Pro Demi';
-        font-size:14px;
+        font-size:1rem;
     }
 
     p {
-        font-size:13px;
+        font-size:0.93rem;
     }
 
     img {
@@ -41,22 +41,29 @@
         }
     }
 
-    @include tablet {
+    
+
+
+}
+
+@include tablet {
+
+    .footer {
         padding: 0 36px;
 
         h1 {
             font-family: 'Avenir Next LT Pro Demi';
-            font-size:36px;
+            font-size:2.57rem;
             padding: 48px 0 36px 0;
         }
     
         h2 {
             font-family: 'Avenir Next LT Pro Demi';
-            font-size:14px;
+            font-size:1rem;
         }
     
         p {
-            font-size:13px;
+            font-size:0.93rem;
         }
     
         img {
@@ -92,21 +99,38 @@
                 display:none;
             }
         }
-
     }
 
+    
 
 }
 
 @include desktop {
 
     .footer {
+        box-sizing:border-box;
+        padding:0 36px;
         width:1020px;
     
         &__container {
             background-color: $bandsite-black;
             display:flex;
             justify-content: center;
+        }
+
+        &__section {
+            
+            width:660px;
+            display:flex;
+            justify-content: space-between;
+
+            &--component {
+            padding: 0 0 36px 0;
+            }
+    
+            &--logomobile {
+                display:none;
+            }
         }
     }
 }
