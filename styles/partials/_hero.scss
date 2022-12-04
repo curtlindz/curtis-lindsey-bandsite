@@ -5,8 +5,8 @@
 
     img {
         width: 100%;
-        height: auto;
-
+        height:60vw;
+        object-fit: cover;
     }
 
     &__text {
@@ -44,6 +44,10 @@
 
         display:flex;
 
+        img {
+            height:55vw;
+        }
+
         h1 {
             font-size: 4.29rem;
             padding: 0 36px;
@@ -61,6 +65,10 @@
 
         h1 {
             padding: 0 36px;
+        }
+
+        img {
+            height: 50vw;
         }
 
         &__text {
