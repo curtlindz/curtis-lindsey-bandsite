@@ -1,42 +1,42 @@
 .about {
 
-    padding: 0 16px;
+    padding: 0 1.14rem;
     color:$bandsite-black;
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
         font-size: 1.7rem;
-        padding: 24px 0 16px 0;
+        padding: 1.7rem 0 1.14rem 0;
     }
 
     h2 {
         font-family: 'Avenir Next LT Pro Demi';
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
         line-height:1.6rem;
     }
 
     p {
         font-family: 'Avenir Next LT Pro Demi';
-        padding: 0 0 24px 0;
+        padding: 0 0 1.7rem 0;
         line-height:1.6rem;
     }
 
     h3 {
         font-family: 'Avenir Next LT Pro Demi';
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
     }
 
     article {
         font-family: 'Avenir Next LT Pro Regular';
         font-size:0.93rem;
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
         line-height: 1.3rem;
     }
 
     img {
         width:100%;
         height:auto;
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
     }
 
 }
@@ -52,12 +52,12 @@
             h3 {
                 font-family: 'Avenir Next LT Pro Demi';
                 font-size:1.7rem;
-                padding: 0 80px 16px 80px;
+                padding: 0 5.7rem 1.14rem 5.7rem;
             }
 
             h2 {
                 font-family: 'Avenir Next LT Pro Demi';
-                padding: 0 0 16px 0;
+                padding: 0 0 1.14rem 0;
                 line-height:2.29rem;
             }
     
@@ -66,18 +66,18 @@
                 width:100%;
                 object-fit: cover;
                 height:50vw;
-                padding: 0 80px 36px 80px;
+                padding: 0 5.7rem 2.57rem 5.7rem;
             }
             
             h1 {
-                padding: 48px 0 36px 36px;
+                padding: 3.43rem 0 2.57rem 2.57rem;
                 font-size:2.57rem;
             }
             
 
             &__quotation {
             
-                padding: 0 80px 36px 80px;
+                padding: 0 5.7rem 2.57rem 5.7rem;
 
                 &--quote {
                     font-family: 'Avenir Next LT Pro Demi';
@@ -95,7 +95,7 @@
                 display:flex;
                 font-family: 'Avenir Next LT Pro Regular';
                 font-size:1rem;
-                padding: 0 80px 36px 80px;
+                padding: 0 5.7rem 2.57rem 5.7rem;
 
                 article {
                     line-height: 1.57rem;
@@ -103,7 +103,7 @@
 
 
                 :last-child {
-                    padding: 0 0 0 36px;
+                    padding: 0 0 0 2.57rem;
                 }
             }
             

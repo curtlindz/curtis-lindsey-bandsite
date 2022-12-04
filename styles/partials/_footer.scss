@@ -1,13 +1,13 @@
 .footer {
     background-color: $bandsite-black;
     color:$white;
-    padding: 0 16px;
+    padding: 0 1.14rem;
 
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
         font-size:1.7rem;
-        padding: 24px 0 16px 0;
+        padding: 1.7rem 0 1.14rem 0;
     }
 
     h2 {
@@ -20,7 +20,7 @@
     }
 
     img {
-        padding: 0 16px 16px 0;
+        padding: 0 1.14rem 1.14rem 0;
     }
 
     &__heading {
@@ -33,17 +33,17 @@
     &__section {
 
         &--component {
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
         }
 
         &--logomobile {
-            padding: 32px 0 0 0;
+            padding: 2.57rem 0 0 0;
         }
 
         &--legal {
 
             p{
-                padding: 0 0 16px 0;
+                padding: 0 0 1.14rem 0;
                 font-size:0.625rem;
             }  
         }
@@ -57,12 +57,12 @@
 @include tablet {
 
     .footer {
-        padding: 0 36px;
+        padding: 0 2.57rem;
 
         h1 {
             font-family: 'Avenir Next LT Pro Demi';
             font-size:2.57rem;
-            padding: 48px 0 36px 0;
+            padding: 3.43rem 0 2.57rem 0;
         }
     
         h2 {
@@ -75,7 +75,7 @@
         }
     
         img {
-            padding: 0 0 0 36px;
+            padding: 0 0 0 2.57rem;
         }
     
         &__heading {
@@ -100,7 +100,7 @@
             justify-content: space-between;
 
             &--component {
-            padding: 0 0 36px 0;
+            padding: 0 0 2.57rem 0;
             }
     
             &--logomobile {
@@ -110,7 +110,7 @@
             &--legal {
             
                 p{
-                    padding: 0 0 36px 0;
+                    padding: 0 0 2.57rem 0;
                 }  
             }
         }
@@ -124,7 +124,7 @@
 
     .footer {
         box-sizing:border-box;
-        padding:0 36px;
+        padding:0 2.57rem;
         width:1020px;
     
         &__container {
@@ -140,7 +140,7 @@
             justify-content: space-between;
 
             &--component {
-            padding: 0 0 36px 0;
+            padding: 0 0 2.57rem 0;
             }
     
             &--logomobile {

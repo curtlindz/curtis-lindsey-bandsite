@@ -1,19 +1,19 @@
 .gallery {
 
-    padding: 0 16px;
+    padding: 0 1.14rem;
     background-color: $alabaster;
     color:$bandsite-black;
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
         font-size: 1.7rem;
-        padding: 24px 0 16px 0;
+        padding: 1.7rem 0 1.14rem 0;
     }
 
     img {
         width:100%;
         height:auto;
-        padding: 0 0 16px 0;
+        padding: 0 0 1.14rem 0;
     }
 
     &__images {
@@ -33,17 +33,17 @@
         padding: 0;
 
         h1 {
-            padding: 48px 0 36px 36px;
+            padding: 3.43rem 0 2.57rem 2.57rem;
             font-size:2.57rem;
         }
 
         &__images {
             display:flex;
-            padding: 0 18px;
+            padding: 0 1.29rem;
     
             &--column {
                 display:inline;
-                padding: 0 18px;
+                padding: 0 1.29rem;
             }
 
             &--row {
@@ -51,7 +51,7 @@
             }
         }
         img {
-            padding: 0 0 36px 0;
+            padding: 0 0 2.57rem 0;
         }
     }
 
