@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Avenir Next LT Pro Regular";
-  src: url("/assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  src: url("../assets/fonts/AvenirNextLTPro.ttf") format("truetype"), url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Avenir Next LT Pro Demi";
-  src: url("/assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  src: url("../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype"), url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
 }
 @font-face {
   font-family: "Avenir Next LT Pro Bold";
-  src: url("/assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  src: url("../assets/fonts/AvenirNextLTProBold.ttf") format("truetype"), url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 * {
   margin: 0;
@@ -307,7 +307,7 @@ h1, h2, p, section, article {
   border-bottom: solid;
 }
 .header__links--inactive {
-  color: #AFAFAF;
+  color: #E1E1E1;
 }
 
 @media (min-width: 768px) {
