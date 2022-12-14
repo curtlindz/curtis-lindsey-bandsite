@@ -1,0 +1,128 @@
+.comments {
+
+    padding: 0 1.14rem;
+    color:$bandsite-black;
+
+
+    h1 {
+        font-family: 'Avenir Next LT Pro Demi';
+        font-size: 1.7rem;
+        padding: 1.7rem 0 1.14rem 0;
+    }
+
+    h3 {
+        color:$silver;
+        font-size:0.71rem;
+        font-family: 'Avenir Next LT Pro Demi';
+        padding: 0 0 0.29rem 0;
+    }
+
+    input::placeholder {
+        color: $bandsite-black;
+    }
+
+    input:focus {
+        outline: none;
+    border-color: $bandsite-black;
+    }
+
+    &__input {
+
+        display:flex;
+        width:100%;
+
+        &--avatar {
+            width:36px;
+            height:36px;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: $mercury;
+
+            margin: 1.4rem 1.14rem 0 0;
+        }
+
+        &--name-field, &--comment-field {
+            @include formfield-mobile
+        }
+
+        &--comment-field {
+            height:5rem;
+        }
+
+        &--button {
+            background-color: $bandsite-black;
+            box-sizing: border-box;
+            height:2.86rem;
+            width:100%;
+            border:none;
+            border-radius: 4px;
+            color:$white;
+            font-family:'Avenir Next LT Pro Demi' ;
+            margin:0 0 1.14rem 0;
+        }
+
+        &--button:hover {
+            background-color: $bandsite-darkblack;
+            cursor:pointer;
+        }
+
+        &--section2 {
+            width:100%;
+        }
+
+    
+    }
+
+}
+
+.panel {
+
+    padding: 0 1.14rem;
+
+    &__comment {
+
+        border-top: solid 1px $mercury;
+        padding: 1.14rem 0;
+        display:flex;
+
+        
+        &--avatar {
+            
+            min-width:36px;
+            height:36px;
+            background-color: $mercury;
+            border:none;
+            border-radius:50%;
+            object-fit:fill;
+            margin-right:1.14rem;
+        }
+
+        &--details {
+            display:flex;
+            text-align: center;
+            justify-content: space-between;
+            width:100%;
+
+            h3 {
+                font-family: 'Avenir Next LT Pro Demi';
+                font-size: 1.14rem;
+                color:$bandsite-black;
+                padding: 0 0 1.14rem 0;
+            }
+
+            span {
+                color:$silver;
+            }
+
+        }
+
+    }
+
+}
+
+
+.panel__comment:last-child {
+    border-bottom: solid 1px $mercury;
+    padding: 1.14rem 0;
+    margin-bottom: 1.14rem;
+}

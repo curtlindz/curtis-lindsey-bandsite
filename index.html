@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css"/>
+    <script src="./scripts/index-page.js" defer></script>
     <title>Bandsite - Biography</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <div>
                 <ul class="header__links">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                     <li class="header__links--link header__links--active"><a href="./index.html">Biography</a></li>
-                    <li class="header__links--link header__links--inactive"><a>Shows</a></li>
+                    <li class="header__links--link header__links--inactive"><a href="./pages/shows.html">Shows</a></li>
                 </ul>
             </div>
         </header>
@@ -86,6 +87,29 @@
                 </div>
             </div>
             
+        </section>
+    </div>
+
+    <div class="comments__container">
+        <section class="comments">
+            <h1>Join the Conversation</h1>
+            <form id="comment-form"  class="comments__input">
+                <div class="comments__input--section1">
+                    <img class="comments__input--avatar" src="./assets/images/Mohan-muruge.jpg" alt="defaultavatar">
+                </div>
+                <div class="comments__input--section2">
+                    <h3 class="comments__input--name-title">NAME</h3>
+                    <input class= "comments__input--name-field" type="text" name="fullName" placeholder="Enter your name">
+                    <h3 class="comments__input--comment-title">COMMENT</h3>
+                    <input class="comments__input--comment-field" type="text" name="comment" placeholder="Add a new comment">
+                    <button class="comments__input--button">COMMENT</button>
+                </div>
+            </form> 
+        </section>
+        <section class="panel">
+            <div id="my-comments">
+                <!-- Comments here -->
+            </div>
         </section>
     </div>
     

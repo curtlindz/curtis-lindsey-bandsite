@@ -404,4 +404,125 @@ h1, h2, p, section, article {
     width: 1020px;
     box-sizing: border-box;
   }
+}
+.comments {
+  padding: 0 1.14rem;
+  color: #323232;
+}
+.comments h1 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 1.7rem;
+  padding: 1.7rem 0 1.14rem 0;
+}
+.comments h3 {
+  color: #AFAFAF;
+  font-size: 0.71rem;
+  font-family: "Avenir Next LT Pro Demi";
+  padding: 0 0 0.29rem 0;
+}
+.comments input::-moz-placeholder {
+  color: #323232;
+}
+.comments input:-ms-input-placeholder {
+  color: #323232;
+}
+.comments input::placeholder {
+  color: #323232;
+}
+.comments input:focus {
+  outline: none;
+  border-color: #323232;
+}
+.comments__input {
+  display: flex;
+  width: 100%;
+}
+.comments__input--avatar {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  margin: 1.4rem 1.14rem 0 0;
+}
+.comments__input--name-field, .comments__input--comment-field {
+  box-sizing: border-box;
+  min-height: 2.57rem;
+  width: 100%;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  line-height: 0;
+  padding: 0.86rem;
+  margin: 0 0 1.14rem 0;
+}
+.comments__input--name-field ::-moz-placeholder, .comments__input--comment-field ::-moz-placeholder {
+  color: red;
+}
+.comments__input--name-field :-ms-input-placeholder, .comments__input--comment-field :-ms-input-placeholder {
+  color: red;
+}
+.comments__input--name-field ::placeholder, .comments__input--comment-field ::placeholder {
+  color: red;
+}
+.comments__input--comment-field {
+  height: 5rem;
+}
+.comments__input--button {
+  background-color: #323232;
+  box-sizing: border-box;
+  height: 2.86rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: "Avenir Next LT Pro Demi";
+  margin: 0 0 1.14rem 0;
+}
+.comments__input--button:hover {
+  background-color: #000000;
+  cursor: pointer;
+}
+.comments__input--section2 {
+  width: 100%;
+}
+
+.panel {
+  padding: 0 1.14rem;
+}
+.panel__comment {
+  border-top: solid 1px #E1E1E1;
+  padding: 1.14rem 0;
+  display: flex;
+}
+.panel__comment--avatar {
+  min-width: 36px;
+  height: 36px;
+  background-color: #E1E1E1;
+  border: none;
+  border-radius: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  margin-right: 1.14rem;
+}
+.panel__comment--details {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.panel__comment--details h3 {
+  font-family: "Avenir Next LT Pro Demi";
+  font-size: 1.14rem;
+  color: #323232;
+  padding: 0 0 1.14rem 0;
+}
+.panel__comment--details span {
+  color: #AFAFAF;
+}
+
+.panel__comment:last-child {
+  border-bottom: solid 1px #E1E1E1;
+  padding: 1.14rem 0;
+  margin-bottom: 1.14rem;
 }/*# sourceMappingURL=bio.css.map */
