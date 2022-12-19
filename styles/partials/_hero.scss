@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 .hero {
     display:flex;
     text-align: left;
@@ -16,10 +19,12 @@
             top: 50%;
             transform: translate(0, -50%);
             z-index: 9;
-            color:$white;
+            color:variables.$white;
             font-size: 1.7rem;
             font-family: 'Avenir Next LT Pro Demi';
             padding: 0 1.14rem;
+            width:100%;
+            box-sizing: border-box;
         }
 
         &--overlay {
@@ -27,7 +32,7 @@
             position:absolute;
             width:100%;
             height:100%;
-            background:$bandsite-black;
+            background:variables.$bandsite-black;
             opacity:0.5;
             top:0;
             overflow:hidden;
@@ -35,10 +40,32 @@
 
     }
 
+    &__shows {
+        img {
+            width: 100%;
+            height:90vw;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 1.7rem;
+            width:70%;
+            font-family: 'Avenir Next LT Pro Demi';
+            padding-bottom:1.14rem;
+        }
+        h3 {
+            font-family: 'Avenir Next LT Pro Regular';
+            padding-bottom:1.14rem;
+        }
+        iframe {
+            height:8rem;
+        }
+    }
+
+
     
 }
 
-@include tablet {
+@include mixins.tablet {
 
     .hero {
 
@@ -48,15 +75,42 @@
             height:55vw;
         }
 
-        h1 {
-            font-size: 4.29rem;
-            padding: 0 2.57rem;
+        &__text {
+            &--outer {
+                
+                padding: 0 2.57rem;
+                font-size: 4.29rem;
+            }
+            
+            
+        }
+
+        &__shows {
+            img {
+                width: 100%;
+                height:70vw;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: 4.29rem;
+                width:75%;
+                padding-bottom:3.43rem;
+            }
+            h3 {
+                font-size:1.7rem;
+                padding-bottom:1.14rem;
+            }
+            iframe {
+                height:10rem;
+                width:55%;
+            }
         }
     }
     
 }
 
-@include desktop {
+@include mixins.desktop {
 
     .hero {
 
@@ -76,8 +130,25 @@
             &--outer {
                 width:1020px;
                 box-sizing: border-box;
-                
+                display:flex;
+                align-items: center;
             }
         }
+
+        &__shows {
+            
+            h1 {
+                padding:0;
+                width:80%;
+            }
+
+            iframe {
+                height:10rem;
+                width:60%;
+            }
+            
+        }
+
+        
     }
 }

@@ -1,8 +1,8 @@
-@import './variables';
-@import './fonts';
-@import './general';
-@import './mixins';
-@import './partials/footer';
-@import './partials/header';
-@import './partials/hero';
-@import './partials/showlistings';
+@use './variables';
+@use './mixins';
+@use './fonts';
+@use './general';
+@use './partials/footer';
+@use './partials/header';
+@use './partials/hero';
+@use './partials/showlistings';

@@ -9,7 +9,7 @@ let shows = [
 
   function displayHeaders() {
 
-    const cardEl = document.createElement("article");
+    const cardEl = document.createElement("div");
     cardEl.classList.add("shows__heading");
 
     const dateHeaderEl = document.createElement("h3");
@@ -98,4 +98,21 @@ let shows = [
 
 renderShows();
 
+let showItems = document.querySelectorAll("#my-shows > article");
 
+console.log(showItems);
+
+for (let article of showItems) {
+  
+  article.addEventListener("click", function(){
+
+    for (let article of showItems) {
+      article.classList.remove('active');
+      console.log('class removed');
+    }
+    
+    this.classList.add('active');
+    console.log('class added');
+  });
+  
+}

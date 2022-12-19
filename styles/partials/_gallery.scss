@@ -1,8 +1,11 @@
+@use '../variables';
+@use '../mixins';
+
 .gallery {
 
     padding: 0 1.14rem;
-    background-color: $alabaster;
-    color:$bandsite-black;
+    background-color: variables.$alabaster;
+    color:variables.$bandsite-black;
 
     h1 {
         font-family: 'Avenir Next LT Pro Demi';
@@ -26,7 +29,7 @@
     
 }
 
-@include tablet {
+@include mixins.tablet {
 
     .gallery {
 
@@ -58,7 +61,7 @@
     
 }
 
-@include desktop {
+@include mixins.desktop {
 
     .gallery {
         width:1020px;
@@ -66,7 +69,7 @@
 
 
         &__container {
-            background-color: $alabaster;
+            background-color: variables.$alabaster;
             display:flex;
             justify-content: center;
         }

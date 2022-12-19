@@ -1,13 +1,13 @@
 @use './variables';
 
 @mixin tablet {
-    @media (min-width: $tablet-width) {
+    @media (min-width: variables.$tablet-width) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-width) {
+    @media (min-width: variables.$desktop-width) {
         @content;
     }
 }
@@ -16,7 +16,7 @@
     box-sizing:border-box;
     min-height:2.57rem;
     width:100%;
-    border: 1px solid $mercury;
+    border: 1px solid variables.$mercury;
     border-radius: 4px;
     line-height: 0;
     padding:0.86rem;

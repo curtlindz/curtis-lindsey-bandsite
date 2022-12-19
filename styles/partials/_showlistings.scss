@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../mixins';
+
 .shows {
 
     h1 {
@@ -7,40 +10,47 @@
     }
 
     h3 {
-        color:$silver;
+        color:variables.$silver;
         font-size:0.71rem;
         font-family: 'Avenir Next LT Pro Demi';
         padding: 1.14rem 0 0.29rem 0;
     }
 
     button {
-        background-color: $bandsite-black;
+        background-color: variables.$bandsite-black;
         box-sizing: border-box;
         height:2.86rem;
         width:100%;
         border:none;
         border-radius: 4px;
-        color:$white;
+        color:variables.$white;
         font-family:'Avenir Next LT Pro Demi' ;
         margin: 1.14rem 0;
+        &:hover {
+            background-color: variables.$bandsite-darkblack;
+            cursor:pointer;
+        }
     }
 
-    button:hover {
-        background-color: $bandsite-darkblack;
-        cursor:pointer;
-    }
+    
 
     &__heading {
         display:none;
     }
     
     &__listing {
-        border-bottom: solid 1px $mercury;
-        padding: 0 1.14rem;
+        border-bottom: solid 1px variables.$mercury;
+        padding: 0 1.14rem; 
 
         &--date {
             font-family: 'Avenir Next LT Pro Demi';
         }
+
+        &:hover {
+            background-color: variables.$alabaster;
+            cursor:pointer;
+        }
+        
     }
     
     :last-child {
@@ -52,7 +62,12 @@
     }
 } 
 
-@include tablet {
+.active {
+    background-color: variables.$mercury;
+}
+
+
+@include mixins.tablet {
     .shows {
 
         h1 {
@@ -61,23 +76,19 @@
         }
     
         h3 {
-            color:$silver;
-            font-size:0.71rem;
-            font-family: 'Avenir Next LT Pro Demi';
-            padding: 1.14rem 0 0.29rem 0;
+            font-size:0.857rem;
+            padding: 2.57rem 0 0.29rem 0;
+            height:auto;
         }
     
         button {
-            background-color: $bandsite-black;
-            box-sizing: border-box;
             height:2.86rem;
             width:20%;
             border:none;
             border-radius: 4px;
-            color:$white;
+            color:variables.$white;
             font-family:'Avenir Next LT Pro Demi' ;
-            margin: 1.14rem 0;
-            padding:0 2.29rem;
+            margin: 0;
         }
 
         &__heading {
@@ -109,13 +120,15 @@
             display:flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 0  2.57rem;
+            padding: 0  1.285rem;
+            margin: 0  1.285rem;
             align-items: center;
             text-align:left;
     
             &--date {
                 width:20%;
                 text-align:left;
+                padding: 1.95rem 0;
             }
             &--venue {
                 width:20%;
@@ -129,10 +142,12 @@
             &--header {
                 display:none;
             }
+
+            
         }
         
         :last-child {
-            margin-bottom: 2.57rem;
+            margin-bottom: 0;
         }
 
         &__headers {
@@ -140,4 +155,35 @@
             justify-content: space-between;
         }
     }
+    #my-shows {
+        &:last-child{
+            margin-bottom:2.57rem;
+        }
+    }
 }
+
+@include mixins.desktop {
+    .shows {
+        display:flex;
+        width:100%;
+        box-sizing:border-box;
+        width:1020px;
+        justify-content: space-between;
+
+        &__container {
+            display:flex;
+            justify-content: center;
+        }
+        h3 {
+            font-size:0.857rem;
+            padding: 4.86rem 0 0.29rem 0;
+            height:auto;
+        }
+    }
+
+    #my-shows {
+        width:75%;
+    }
+}
+
+
