@@ -12,6 +12,7 @@ let comments = [
     avatarEl.classList.add("panel__comment--avatar");
 
     const detailsEl = document.createElement("div");
+    detailsEl.classList.add("panel__comment--container");
 
     const headingEl = document.createElement("div");
     headingEl.classList.add("panel__comment--details");

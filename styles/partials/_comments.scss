@@ -7,17 +7,10 @@
     color:variables.$bandsite-black;
 
 
-    h1 {
+    &__header {
         font-family: 'Avenir Next LT Pro Demi';
         font-size: 1.7rem;
         padding: 1.7rem 0 1.14rem 0;
-    }
-
-    h3 {
-        color:variables.$silver;
-        font-size:0.71rem;
-        font-family: 'Avenir Next LT Pro Demi';
-        padding: 0 0 0.29rem 0;
     }
 
     input::placeholder {
@@ -26,7 +19,7 @@
 
     input:focus {
         outline: none;
-    border-color: variables.$bandsite-black;
+        border-color: variables.$bandsite-black;
     }
 
     &__input {
@@ -42,6 +35,13 @@
             background-color: variables.$mercury;
 
             margin: 1.4rem 1.14rem 0 0;
+        }
+
+        &--title {
+            color:variables.$silver;
+            font-size:0.71rem;
+            font-family: 'Avenir Next LT Pro Demi';
+            padding: 0 0 0.29rem 0;
         }
 
         &--name-field, &--comment-field {
@@ -87,6 +87,7 @@
         border-top: solid 1px variables.$mercury;
         padding: 1.14rem 0;
         display:flex;
+        width:100%;
 
         
         &--avatar {
@@ -98,6 +99,10 @@
             border-radius:50%;
             object-fit:fill;
             margin-right:1.14rem;
+        }
+
+        &--container {
+            width:100%;
         }
 
         &--details {
@@ -136,7 +141,7 @@
         padding: 0;
     
     
-        h1 {
+        &__header {
             font-family: 'Avenir Next LT Pro Demi';
             font-size:2.57rem;
             padding: 3.43rem 0 2.57rem 2.57rem;
@@ -250,7 +255,18 @@
 @include mixins.desktop {
 
     .comments {
-        &__input{
+
+        &__header {
+
+            width:1020px;
+            box-sizing: border-box;
+            &--container {
+                display:flex;
+                justify-content: center;
+            }
+            
+        }
+        &__input {
             width:50%;
             margin:auto;
         }

@@ -30,7 +30,7 @@
     }
 
     &__article {
-        
+
         p {
             font-family: 'Avenir Next LT Pro Regular';
             font-size:0.93rem;
@@ -139,9 +139,13 @@
 
             &--quote {
                 width:710px;
+            }
         }
 
-    }
+        img {
+            width:100%;
+            height:auto;
+        }
 
 }
 }

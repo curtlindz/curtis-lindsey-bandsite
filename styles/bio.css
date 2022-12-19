@@ -117,6 +117,10 @@ h1, h2, p, section, article {
   .about__quotation--quote {
     width: 710px;
   }
+  .about img {
+    width: 100%;
+    height: auto;
+  }
 }
 .footer {
   background-color: #323232;
@@ -462,16 +466,10 @@ h1, h2, p, section, article {
   padding: 0 1.14rem;
   color: #323232;
 }
-.comments h1 {
+.comments__header {
   font-family: "Avenir Next LT Pro Demi";
   font-size: 1.7rem;
   padding: 1.7rem 0 1.14rem 0;
-}
-.comments h3 {
-  color: #AFAFAF;
-  font-size: 0.71rem;
-  font-family: "Avenir Next LT Pro Demi";
-  padding: 0 0 0.29rem 0;
 }
 .comments input::-moz-placeholder {
   color: #323232;
@@ -498,6 +496,12 @@ h1, h2, p, section, article {
   border-radius: 50%;
   background-color: #E1E1E1;
   margin: 1.4rem 1.14rem 0 0;
+}
+.comments__input--title {
+  color: #AFAFAF;
+  font-size: 0.71rem;
+  font-family: "Avenir Next LT Pro Demi";
+  padding: 0 0 0.29rem 0;
 }
 .comments__input--name-field, .comments__input--comment-field {
   box-sizing: border-box;
@@ -547,6 +551,7 @@ h1, h2, p, section, article {
   border-top: solid 1px #E1E1E1;
   padding: 1.14rem 0;
   display: flex;
+  width: 100%;
 }
 .panel__comment--avatar {
   min-width: 36px;
@@ -557,6 +562,9 @@ h1, h2, p, section, article {
   -o-object-fit: fill;
      object-fit: fill;
   margin-right: 1.14rem;
+}
+.panel__comment--container {
+  width: 100%;
 }
 .panel__comment--details {
   display: flex;
@@ -584,7 +592,7 @@ h1, h2, p, section, article {
   .comments {
     padding: 0;
   }
-  .comments h1 {
+  .comments__header {
     font-family: "Avenir Next LT Pro Demi";
     font-size: 2.57rem;
     padding: 3.43rem 0 2.57rem 2.57rem;
@@ -683,6 +691,14 @@ h1, h2, p, section, article {
   }
 }
 @media (min-width: 1280px) {
+  .comments__header {
+    width: 1020px;
+    box-sizing: border-box;
+  }
+  .comments__header--container {
+    display: flex;
+    justify-content: center;
+  }
   .comments__input {
     width: 50%;
     margin: auto;
