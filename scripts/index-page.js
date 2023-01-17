@@ -1,10 +1,63 @@
+// code for new comments
+const formEl = document.querySelector("#comment-form");
+  
+// creating new date variable
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; // Months start at 0!
+let dd = today.getDate();
+
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+
+const formattedToday = mm + '/' + dd + '/' + yyyy;
+
+//form submission function
+function formSubmitHandler(e) {
+  e.preventDefault();
+
+  if (e.target.fullName.value === null) {
+    alert("Please agree to the agreement first.");
+    return;
+  }
+
+  const commentData = {
+    name: e.target.fullName.value,
+    timestamp: formattedToday,
+    comment: e.target.comment.value,
+  };
+
+  const formSubmission = {
+    fullName: e.target.fullName.value,
+    timestamp: formattedToday,
+    comment: e.target.comment.value,
+  };
+
+  console.log(formSubmission);
+
+  // formEl.reset();
+  // comments.unshift(commentData);
+  // renderComments();
+}
+
+formEl.addEventListener("submit", formSubmitHandler);
+
 axios
+  .post('https://project-1-api.herokuapp.com/comments?api_key=${api_key}', {
+    name: commentData.name,
+    comment: commentData.comment
+  })
   .get('https://project-1-api.herokuapp.com/comments?api_key=${api_key}')
   .then((response) => {
     const comments = response.data;
     console.log(comments);
 
     function displayComment(comment) {
+
+      const date = new Date (comment.timestamp);
+      const dateFormatted = date.toLocaleDateString();
+      console.log(dateFormatted);
+
       const cardEl = document.createElement("article");
       cardEl.classList.add("panel__comment");
   
@@ -21,7 +74,7 @@ axios
       nameEl.innerText = comment.name;
     
       const dateEl = document.createElement("span");
-      dateEl.innerText = comment.date;
+      dateEl.innerText = dateFormatted;
     
       const commentEl = document.createElement("span");
       commentEl.innerText = comment.comment;
@@ -48,51 +101,6 @@ axios
       }
   }
   
-  
-  const formEl = document.querySelector("#comment-form");
-  
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  let mm = today.getMonth() + 1; // Months start at 0!
-  let dd = today.getDate();
-  
-  if (dd < 10) dd = '0' + dd;
-  if (mm < 10) mm = '0' + mm;
-  
-  const formattedToday = mm + '/' + dd + '/' + yyyy;
-  
-  console.log(formattedToday);
-  
-  
-  function formSubmitHandler(e) {
-    e.preventDefault();
-  
-    if (e.target.fullName.value === null) {
-      alert("Please agree to the agreement first.");
-      return;
-    }
-  
-    const commentData = {
-      name: e.target.fullName.value,
-      date: formattedToday,
-      comment: e.target.comment.value,
-    };
-  
-    const formSubmission = {
-      fullName: e.target.fullName.value,
-      date: formattedToday,
-      comment: e.target.comment.value,
-    };
-  
-    console.log(formSubmission);
-  
-    formEl.reset();
-    comments.unshift(commentData);
-    renderComments();
-  }
-  
-  formEl.addEventListener("submit", formSubmitHandler);
-  
   renderComments();
     
   }
@@ -100,6 +108,8 @@ axios
     console.log(error);
   }
   );
+
+
 
 // let comments = [
 //     { name: "Connor Walton", date: "02/17/2021", comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." },
