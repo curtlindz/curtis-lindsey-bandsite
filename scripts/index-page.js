@@ -1,6 +1,11 @@
-// code for new comments
+// creating empty comment array
+let comments = [];
+
+
+// variable for form
 const formEl = document.querySelector("#comment-form");
-  
+
+
 // creating new date variable
 const today = new Date();
 const yyyy = today.getFullYear();
@@ -11,6 +16,7 @@ if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
 
 const formattedToday = mm + '/' + dd + '/' + yyyy;
+
 
 //form submission function
 function formSubmitHandler(e) {
@@ -27,94 +33,114 @@ function formSubmitHandler(e) {
     comment: e.target.comment.value,
   };
 
-  const formSubmission = {
-    fullName: e.target.fullName.value,
-    timestamp: formattedToday,
-    comment: e.target.comment.value,
-  };
+  console.log(commentData);
 
-  console.log(formSubmission);
+  formEl.reset();
+  comments.unshift(commentData);
+  renderComments();
 
-  // formEl.reset();
-  // comments.unshift(commentData);
-  // renderComments();
 }
 
 formEl.addEventListener("submit", formSubmitHandler);
 
-axios
-  .post('https://project-1-api.herokuapp.com/comments?api_key=${api_key}', {
-    name: commentData.name,
-    comment: commentData.comment
-  })
-  .get('https://project-1-api.herokuapp.com/comments?api_key=${api_key}')
-  .then((response) => {
-    const comments = response.data;
-    console.log(comments);
 
-    function displayComment(comment) {
+//display comments
+function displayComment(comment) {
 
-      const date = new Date (comment.timestamp);
-      const dateFormatted = date.toLocaleDateString();
-      console.log(dateFormatted);
+  const date = new Date (comment.timestamp);
+  const dateFormatted = date.toLocaleDateString();
+  console.log(dateFormatted);
 
-      const cardEl = document.createElement("article");
-      cardEl.classList.add("panel__comment");
-  
-      const avatarEl = document.createElement("img");
-      avatarEl.classList.add("panel__comment--avatar");
-  
-      const detailsEl = document.createElement("div");
-      detailsEl.classList.add("panel__comment--container");
-  
-      const headingEl = document.createElement("div");
-      headingEl.classList.add("panel__comment--details");
-  
-      const nameEl = document.createElement("h3");
-      nameEl.innerText = comment.name;
-    
-      const dateEl = document.createElement("span");
-      dateEl.innerText = dateFormatted;
-    
-      const commentEl = document.createElement("span");
-      commentEl.innerText = comment.comment;
-    
-      cardEl.appendChild(avatarEl);
-      cardEl.appendChild(detailsEl);
-      detailsEl.appendChild(headingEl);
-      headingEl.appendChild(nameEl);
-      headingEl.appendChild(dateEl);
-      detailsEl.appendChild(commentEl);
-    
-      return cardEl;
-    }
-  
-  
-  function renderComments() {
-  
-      const myCommentsEl = document.querySelector("#my-comments");
-  
-      myCommentsEl.innerHTML = "";
-  
-      for (let i = 0; i < comments.length; i++) {
-          myCommentsEl.appendChild(displayComment(comments[i]));
-      }
+  const cardEl = document.createElement("article");
+  cardEl.classList.add("panel__comment");
+
+  const avatarEl = document.createElement("img");
+  avatarEl.classList.add("panel__comment--avatar");
+
+  const detailsEl = document.createElement("div");
+  detailsEl.classList.add("panel__comment--container");
+
+  const headingEl = document.createElement("div");
+  headingEl.classList.add("panel__comment--details");
+
+  const nameEl = document.createElement("h3");
+  nameEl.innerText = comment.name;
+
+  const dateEl = document.createElement("span");
+  dateEl.innerText = dateFormatted;
+
+  const commentEl = document.createElement("span");
+  commentEl.innerText = comment.comment;
+
+  cardEl.appendChild(avatarEl);
+  cardEl.appendChild(detailsEl);
+  detailsEl.appendChild(headingEl);
+  headingEl.appendChild(nameEl);
+  headingEl.appendChild(dateEl);
+  detailsEl.appendChild(commentEl);
+
+  return cardEl;
+}
+
+// function to render comments to page
+function renderComments() {
+
+  const myCommentsEl = document.querySelector("#my-comments");
+
+  myCommentsEl.innerHTML = "";
+
+  for (let i = 0; i < comments.length; i++) {
+      myCommentsEl.appendChild(displayComment(comments[i]));
   }
-  
-  renderComments();
+}
+
+// function to get comment data
+function getCommentData() {
+  axios
+  // .post('https://project-1-api.herokuapp.com/comments?api_key=${api_key}', {
+  //   name: commentData.name,
+  //   comment: commentData.comment
+  // })
+  .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
+  .then((response) => {
+    const commentsData = response.data;
     
+    for (let i = 0; i < commentsData.length;i++) {
+      comments.push(commentsData[i]);
+    }
+
+    renderComments();
+
   }
   ).catch((error) => {
     console.log(error);
   }
   );
+}
+
+getCommentData();
+
+function appendCommentData() {
+  axios
+}
+
+console.log(comments);
+
+
+// function addComments() {
+//   axios
+//   .post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`,
+//   {
+
+//   }
+//   )
+  
+// }
 
 
 
-// let comments = [
-//     { name: "Connor Walton", date: "02/17/2021", comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." },
-//     { name: "Emilie Beach", date: "01/09/2021", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day." },
-//     { name: "Miles Acosta", date: "12/20/2020", comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." }
-//   ];
+
+
+
 
   
