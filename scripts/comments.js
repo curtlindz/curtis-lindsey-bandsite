@@ -21,27 +21,46 @@ const formattedToday = mm + '/' + dd + '/' + yyyy;
 //form submission function
 function formSubmitHandler(e) {
   e.preventDefault();
-
-  if (e.target.fullName.value === null) {
-    alert("Please agree to the agreement first.");
-    return;
+  if (e.target.fullName.value == "") {
+    alert("Name must be filled out");
+    return false;
   }
 
+  if (e.target.comment.value == "") {
+    alert("Comment must be filled out");
+    return false;
+  }
+
+  const currentDate = new Date();
   const commentData = {
     name: e.target.fullName.value,
-    timestamp: formattedToday,
+    timestamp: currentDate,
     comment: e.target.comment.value,
   };
 
-  console.log(commentData);
+
+axios
+  .post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`, 
+  {
+    name: commentData.name,
+    comment: commentData.comment,
+  })
+  .then((response) => {
+    comments.push(response.data);
+  })
+  .then((res) => {
+    renderComments();
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
   formEl.reset();
-  comments.unshift(commentData);
   renderComments();
-
 }
 
 formEl.addEventListener("submit", formSubmitHandler);
+renderComments();
 
 
 //display comments
@@ -49,7 +68,6 @@ function displayComment(comment) {
 
   const date = new Date (comment.timestamp);
   const dateFormatted = date.toLocaleDateString();
-  console.log(dateFormatted);
 
   const cardEl = document.createElement("article");
   cardEl.classList.add("panel__comment");
@@ -89,6 +107,8 @@ function renderComments() {
 
   myCommentsEl.innerHTML = "";
 
+  comments.sort((a,b) => b.timestamp - a.timestamp);
+
   for (let i = 0; i < comments.length; i++) {
       myCommentsEl.appendChild(displayComment(comments[i]));
   }
@@ -97,10 +117,6 @@ function renderComments() {
 // function to get comment data
 function getCommentData() {
   axios
-  // .post('https://project-1-api.herokuapp.com/comments?api_key=${api_key}', {
-  //   name: commentData.name,
-  //   comment: commentData.comment
-  // })
   .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
   .then((response) => {
     const commentsData = response.data;
@@ -119,28 +135,3 @@ function getCommentData() {
 }
 
 getCommentData();
-
-function appendCommentData() {
-  axios
-}
-
-console.log(comments);
-
-
-// function addComments() {
-//   axios
-//   .post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`,
-//   {
-
-//   }
-//   )
-  
-// }
-
-
-
-
-
-
-
-  

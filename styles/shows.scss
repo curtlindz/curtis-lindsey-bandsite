@@ -5,4 +5,191 @@
 @use './partials/footer';
 @use './partials/header';
 @use './partials/hero';
-@use './partials/showlistings';
+
+
+.shows {
+
+    &__header {
+        font-family: 'Avenir Next LT Pro Demi';
+        font-size: 1.7rem;
+        padding: 1.7rem 1.14rem 0 1.14rem;
+    }
+
+    &__heading {
+        display:none;
+    }
+    
+    &__listing {
+
+        border-bottom: solid 1px variables.$mercury;
+        padding: 0 1.14rem; 
+
+        &--header {
+            color:variables.$silver;
+            font-size:0.71rem;
+            font-family: 'Avenir Next LT Pro Demi';
+            padding: 1.14rem 0 0.29rem 0;
+        }
+
+        &--date {
+            font-family: 'Avenir Next LT Pro Demi';
+        }
+
+        &--button {
+            background-color: variables.$bandsite-black;
+            box-sizing: border-box;
+            height:2.86rem;
+            width:100%;
+            border:none;
+            border-radius: 4px;
+            color:variables.$white;
+            font-family:'Avenir Next LT Pro Demi' ;
+            margin: 1.14rem 0;
+
+            &:hover {
+                background-color: variables.$bandsite-darkblack;
+                cursor:pointer;
+            }
+        }
+
+        &:hover {
+            background-color: variables.$alabaster;
+            cursor:pointer;
+        }
+        
+    }
+    
+    :last-child {
+        margin-bottom:1.14rem;
+    }
+
+    &__headers {
+        display:none;
+    }
+} 
+
+.active {
+    background-color: variables.$mercury;
+}
+
+
+@include mixins.tablet {
+    .shows {
+
+        &__header {
+            font-size:2.57rem;
+            padding: 3.43rem 2.57rem 0 2.57rem;
+        }
+
+        &__heading {
+            font-size:0.857rem;
+            display:flex;
+            justify-content: space-between;
+            width:100%;
+            padding: 2.57rem 2.57rem 0.29rem 2.57rem;
+            box-sizing: border-box;
+            color:variables.$silver;
+            font-size:0.71rem;
+            font-family: 'Avenir Next LT Pro Demi';
+
+            &--date {
+                width:20%;
+                text-align:left;
+            }
+            &--venue {
+                width:20%;
+                text-align:left;
+            }
+            &--location {
+                width:20%;
+                text-align:left;
+            }
+            &--button {
+                width:20%;
+                text-align:left;
+            }
+        }
+    
+        &__listing {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0  1.285rem;
+            margin: 0  1.285rem;
+            align-items: center;
+            text-align:left;
+    
+            &--date {
+                width:20%;
+                text-align:left;
+                padding: 1.95rem 0;
+            }
+            &--venue {
+                width:20%;
+                text-align:left;
+            }
+            &--location {
+                width:20%;
+                text-align:left;
+            }
+
+            &--header {
+                display:none;
+            }
+
+            &--button {
+                height:2.86rem;
+                width:20%;
+                border:none;
+                border-radius: 4px;
+                color:variables.$white;
+                font-family:'Avenir Next LT Pro Demi' ;
+                margin: 0;
+            }
+
+            
+        }
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        &__headers {
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+
+    #my-shows {
+        &:last-child{
+            margin-bottom:2.57rem;
+        }
+    }
+
+}
+
+@include mixins.desktop {
+    .shows {
+        display:flex;
+        width:100%;
+        box-sizing:border-box;
+        width:1020px;
+        justify-content: space-between;
+
+        &__container {
+            display:flex;
+            justify-content: center;
+        }
+        &__heading {
+            font-size:0.857rem;
+            padding: 4.86rem 2.57rem 0.29rem 2.57rem;
+            height:auto;
+        }
+    }
+
+    #my-shows {
+        width:75%;
+    }
+}
+
+
